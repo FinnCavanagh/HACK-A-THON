@@ -6,6 +6,7 @@ function delayedAlert() {
 
 function slowAlert() {
   alert("Your time is up!");
+
 }
 
 function clearAlert() {
@@ -13,5 +14,5 @@ function clearAlert() {
 }
 
 delayedAlert();
-slowAlert();
-clearAlert();
+// slowAlert();
+// clearAlert();
