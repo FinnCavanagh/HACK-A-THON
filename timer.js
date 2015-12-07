@@ -6,12 +6,14 @@ function delayedAlert() {
 
 function slowAlert() {
   alert("Your time is up!");
+
 }
 
 function clearAlert() {
   window.clearTimeout(timeoutID);
 }
 
-delayedAlert();
+
+// delayedAlert();
 // slowAlert();
 // clearAlert();

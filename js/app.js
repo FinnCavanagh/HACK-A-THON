@@ -1,12 +1,12 @@
 $(document).ready(function () {
   //Set up some globals
-  var pixSize = 8, lastPoint = null, currentColor = "000", mouseDown = 0;
+  var pixSize = 3, lastPoint = null, currentColor = "000", mouseDown = 0;
 
   //Create a reference to the pixel data for our drawing.
   // var pixelDataRef = new Firebase('https://l9dbjpnn5a5.firebaseio-demo.com/');
 
 
-  var pixelDataRef = new Firebase('https://burning-inferno-8419.firebaseio.com/');
+  var pixelDataRef = new Firebase('https://firing-inferno.firebaseio.com/');
 
   // Set up our canvas
   var myCanvas = document.getElementById('drawing-canvas');
