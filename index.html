@@ -15,7 +15,7 @@
     <link rel="stylesheet" type="text/css" href="./css/style.css">
   </head>
   
-
+<div id="snow">
   <body ng-controller="firebaseController">
     <div id="messagesDiv" class="container">
       <div ng-repeat="msg in messages"><em>{{msg.name}}</em>: {{msg.body}}</div>
@@ -33,12 +33,21 @@
        <input type="submit" value="Log in!"> 
      </form>
     
-    <div id="score" class="boxed">SCORE BOARD</div>
+    <div id="score" class="boxed">Player 1 Score</div>
+    <div id="score" class="boxed">Player 2 Score</div>
+    <div id="score" class="boxed">Player 3 Score</div>
+    <div id="score" class="boxed">Player 4 Score</div>
+
+    <button id="player-1">Player 1</div>
+    <button id="player-2">Player 2</div>
+    <button id="player-3">Player 3</div>
+    <button id="player-4">Player 4</div>
 
     <div class="l-demo-container">
-        <canvas id="drawing-canvas" width="550" height="550"></canvas>
+        <canvas id="drawing-canvas" width="600" height="600"></canvas>
     </div>
     <div id="colorholder"></div>
 
   </body>
+</div>
   </html>
