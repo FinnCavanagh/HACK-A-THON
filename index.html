@@ -16,28 +16,67 @@
   </head>
 
   <body ng-controller="firebaseController">
+
+    <div id="chat">
     <div id="messagesDiv" class="container">
       <div ng-repeat="msg in messages"><em>{{msg.name}}</em>: {{msg.body}}</div>
     </div>
     
-    <input type="text" ng-model="name" placeholder="Name">
-    <input type="text" ng-model="msg" ng-keydown="addMessage($event)" placeholder="Message...">
+    <div id="chat-name">
 
-    <div id="playersDiv" class="container" ng-controller="playerController">
+    <input type="text" id="name" ng-model="name" placeholder="Name">
+    <input type="text" id="message" ng-model="msg" ng-keydown="addMessage($event)" placeholder="Message...">
+
+    </div>
+
+    </div>
+
+    <div id="playersDiv" ng-controller="playerController">
         <div ng-repeat="player in players"><em> {{player.player}}
         </em></div>
         <div>
+
+          <form ng-submit="addPlayers()" ng-if="players.length != 4" >
+            <label for="player" ng-if="players.length == 0"> Player 1 enter your name</label>
+            <label for="player" ng-if="players.length == 1"> Player 2 enter your name</label>
+            <label for="player" ng-if="players.length == 2"> Player 3 enter your name</label>
+            <label for="player" ng-if="players.length == 3"> Player 4 enter your name</label>
+          </form>
+          <h1 for="player" ng-if="players.length == 4"> Lets play</h1>
+          <input type="text" name="player" ng-model="player" ng-keydown="addPlayers($event)" ng-if="players.length != 4">   
+          </div>
+        </div>
+
+        <!-- the countdown -->
+
+        <div id="count">
+        <div id="countdown">20</div>
+        </div>
+
+      <script type="text/javascript">
+        var seconds;
+        var temp;
+       
+        function countdown() {
+          seconds = document.getElementById('countdown').innerHTML;
+          seconds = parseInt(seconds, 10);
+       
+          if (seconds == 1) {
+            temp = document.getElementById('countdown');
+            temp.innerHTML = "Times Up!!!";
+            return;
+          }
+       
+          seconds--;
+          temp = document.getElementById('countdown');
+          temp.innerHTML = seconds;
+          timeoutMyOswego = setTimeout(countdown, 500);
+        }
+       
+        countdown();
+      </script>
          
-      <form ng-submit="addPlayers()" ng-if="players.length != 4" >
-        <label for="player" ng-if="players.length == 0"> Player 1 enter your name</label>
-        <label for="player" ng-if="players.length == 1"> Player 2 enter your name</label>
-        <label for="player" ng-if="players.length == 2"> Player 3 enter your name</label>
-        <label for="player" ng-if="players.length == 3"> Player 4 enter your name</label>
-      </form>
-      <h1 for="player" ng-if="players.length == 4"> Lets play</h1>
-      <input type="text" name="player" ng-model="player" ng-keydown="addPlayers($event)" ng-if="players.length != 4">   
-      </div>
-    </div>
+   <!-- countdown finishes. -->
     
     <!--     <div id="score" class="boxed">Player 1 Score</div>
     <div id="score" class="boxed">Player 2 Score</div>
@@ -48,11 +87,13 @@
     <button id="player-2">Player 2</div>
     <button id="player-3">Player 3</div>
     <button id="player-4">Player 4</div> -->
-
-    <div class="l-demo-container" >
+    <div id="canvas">
+    <div class="l-demo-container">
         <canvas id="drawing-canvas" width="550" height="550"></canvas>
     </div>
     <div id="colorholder"></div> 
+    </div>
+    <button id="reset-board"> Clear </button>
   </body>
 </html>
 
