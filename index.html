@@ -15,7 +15,7 @@
     <link rel="stylesheet" type="text/css" href="./css/style.css">
   </head>
   
-
+  <div id="snow">
   <body ng-controller="firebaseController">
     <div id="messagesDiv" class="container">
       <div ng-repeat="msg in messages"><em>{{msg.name}}</em>: {{msg.body}}</div>
@@ -35,11 +35,15 @@
     
 
     <div class="l-demo-container">
-        <canvas id="drawing-canvas" width="600" height="600"></canvas>
+    <div class ="drawing">
+        <canvas id="drawing-canvas" width="550" height="550"></canvas>
+    </div>
     </div>
     <div id="colorholder"></div>
 
 
   
   </body>
+  </div>
   </html>
+
