@@ -26,10 +26,21 @@ angular
       players = "";
     }
 
+    console.log(players.player)
 
-        
+    $scope.score = function(){
+      var count = 0;
+      var scoreBoard = $('#player').click(function() { 
+        console.log("click");
+        count++;
+        $('#score').html("Score is: "+ count); })
 
-    
+        $('#player').on("click", function() {
+          scoreBoard;  
+        })
+    }
 
+
+      
     
   }

@@ -16,6 +16,13 @@ $(document).ready(function () {
     return;
   }
 
+
+  var reset = document.getElementById('reset-board')
+  reset.addEventListener("click", clearCanvas, false);
+  function clearCanvas() {
+    pixelDataRef.remove();
+  }
+
   //Setup each color palette & add it to the screen
   var colors = ["fff","000","f00","0f0","00f","88f","f8d","f88","f05","f80","0f8","cf0","08f","408","ff8","8ff"];
   for (c in colors) {
