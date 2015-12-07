@@ -13,5 +13,5 @@ function clearAlert() {
 }
 
 delayedAlert();
-slowAlert();
-clearAlert();
+// slowAlert();
+// clearAlert();
