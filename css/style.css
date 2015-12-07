@@ -1,4 +1,16 @@
-.l-demo-container {
+#drawing-canvas {
   border: solid;
+  background-color: white;
 }
 
+body {
+
+  background: linear-gradient(#ff1a1a, #009900)
+}
+
+.colorbox {
+  display: inline-block;
+  height: 35px;
+  width: 35px;
+  margin-left: 3px;
+}

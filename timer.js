@@ -15,8 +15,5 @@ function clearAlert() {
 
 <<<<<<< HEAD
 // delayedAlert();
-=======
-delayedAlert();
->>>>>>> 284aeac64260b26409d816404c5a3904b97e0347
 // slowAlert();
 // clearAlert();
