@@ -19,12 +19,30 @@
     <input type="text" ng-model="msg" ng-keydown="addMessage($event)" placeholder="Message...">
 
 
-    <form  ng-submit="createUser(); authWithPassword();">
+<!--     <form  ng-submit="createUser(); authWithPassword();">
        <label for="email">Email</label>
        <input type="text" name="email" ng-model="user.email">
        <label for="password">Password</label>
        <input type="text" name="password" ng-model="user.password">
        <input type="submit" value="Log in!"> 
+     </form> -->
+
+     <div id="playersDiv" class="container">
+       <div>
+         {{player2}}
+       </div>
+     </div>
+
+     <form ng-submit="addPlayers()">
+      <label for="player1">Player 1</label>
+      <input type="text" name="player1" ng-model="player1">   
+      <label for="player2">Player 2</label>
+      <input type="text" name="player2" ng-model="player2">
+      <label for="player 3">Player 3</label>
+      <input type="text" name="player3" ng-model="player3">
+      <label for="player 4">Player 4</label>
+      <input type="text" name="player4" ng-model="player4">
+      <input type="submit" value="Lets play!"> 
      </form>
     
   </body>
