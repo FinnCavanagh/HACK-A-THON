@@ -11,9 +11,9 @@ function firebaseController($firebaseArray, $scope, $firebaseAuth) {
   $scope.messages = $firebaseArray(firebaseRef);
     
   $scope.addMessage = function(e) {
-    console.log($scope)
+
     if (e.keyCode != 13) return;
-    $scope.messages.$add({from: $scope.name, body: $scope.msg});
+    $scope.messages.$add({name: $scope.name, body: $scope.msg});
     $scope.msg = "";
   }
 
