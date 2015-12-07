@@ -1,18 +1,18 @@
-var timeoutID;
+// var timeoutID;
 
-function delayedAlert() {
-  timeoutID = window.setTimeout(slowAlert, 5000);
-}
+// function delayedAlert() {
+//   timeoutID = window.setTimeout(slowAlert, 5000);
+// }
 
-function slowAlert() {
-  alert("Your time is up!");
+// function slowAlert() {
+//   alert("Your time is up!");
 
-}
+// }
 
-function clearAlert() {
-  window.clearTimeout(timeoutID);
-}
+// function clearAlert() {
+//   window.clearTimeout(timeoutID);
+// }
 
-delayedAlert();
+// delayedAlert();
 // slowAlert();
 // clearAlert();

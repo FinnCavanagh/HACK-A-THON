@@ -6,6 +6,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
     <script type="text/javascript" src="app.js"></script>
     <script type="text/javascript" src="controllers/firebaseController.js"></script>
+    <script type="text/javascript" src="controllers/playerController.js"></script>
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
     <link rel="stylesheet" type="text/css" href="style.css">
@@ -33,23 +34,26 @@
        <input type="submit" value="Log in!"> 
      </form> -->
 
-     <div id="playersDiv" class="container">
-       <div>
-         {{player2}}
-       </div>
-     </div>
+    <div id="playersDiv" class="container" ng-controller="playerController">
+        
+        <div ng-repeat="player in players"><em> {{player.player}}
+        </em></div>
+        <div>
+         
 
-     <form ng-submit="addPlayers()">
-      <label for="player1">Player 1</label>
-      <input type="text" name="player1" ng-model="player1">   
-      <label for="player2">Player 2</label>
-      <input type="text" name="player2" ng-model="player2">
-      <label for="player 3">Player 3</label>
-      <input type="text" name="player3" ng-model="player3">
-      <label for="player 4">Player 4</label>
-      <input type="text" name="player4" ng-model="player4">
-      <input type="submit" value="Lets play!"> 
-     </form>
+      <form ng-submit="addPlayers()" ng-if="players.length != 4">
+        <label for="player" ng-if="players.length == 0"> Player 1 enter your name</label>
+        <label for="player" ng-if="players.length == 1"> Player 2 enter your name</label>
+        <label for="player" ng-if="players.length == 2"> Player 3 enter your name</label>
+        <label for="player" ng-if="players.length == 3"> Player 4 enter your name</label>
+        <input type="text" name="player1" ng-model="player">   
+
+        <input type="submit" value="add player!"> 
+      </form>
+      <h1 for="player" ng-if="players.length == 4"> Lets play</h1>
+
+      </div>
+    </div>
     
 
     <div class="l-demo-container">

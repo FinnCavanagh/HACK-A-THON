@@ -18,15 +18,4 @@ function firebaseController($firebaseArray, $scope, $firebaseAuth) {
   }
 
 
-  $scope.players = $firebaseArray(firebaseRef).players
-
-  $scope.addPlayers = function(){
-    $scope.players.$add({player1: $scope.player1, player2: $scope.player2, player3: $scope.player3, player4:  $scope.player4})
-    
-  }
-
-
-
-
-   var auth = $firebaseAuth
 }
