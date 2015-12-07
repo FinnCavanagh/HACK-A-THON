@@ -6,7 +6,7 @@ $(document).ready(function () {
   // var pixelDataRef = new Firebase('https://l9dbjpnn5a5.firebaseio-demo.com/');
 
 
-  var pixelDataRef = new Firebase('https://burning-inferno-8419.firebaseio.com/');
+  var pixelDataRef = new Firebase('https://firing-inferno.firebaseio.com/');
 
   // Set up our canvas
   var myCanvas = document.getElementById('drawing-canvas');
