@@ -12,6 +12,6 @@ function clearAlert() {
   window.clearTimeout(timeoutID);
 }
 
-delayedAlert();
-slowAlert();
-clearAlert();
+// delayedAlert();
+// slowAlert();
+// clearAlert();
