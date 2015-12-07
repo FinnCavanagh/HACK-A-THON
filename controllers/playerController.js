@@ -8,24 +8,22 @@ angular
     $scope.players = $firebaseArray(firebasePlayer)
     var players = $scope.players
 
-    // if (players.length == 0){
-    //   $scope.playerText = "Player 1 enter your name"
-    // }else if (players.length == 1){
-    //   $scope.playerText = "Player 2 enter your name"
-    // }else if (players.length == 2){
-    //   $scope.playerText = "Player 3 enter your name"
-    // }else if (players.length == 3){
-    //   $scope.playerText = "Player 4 enter your name"
-    // }
+
+    if (players.length == 0){
+      $scope.playerText = "Player 1 enter your name"
+    }else if (players.length == 1){
+      $scope.playerText = "Player 2 enter your name"
+    }else if (players.length == 2){
+      $scope.playerText = "Player 3 enter your name"
+    }else if (players.length == 3){
+      $scope.playerText = "Player 4 enter your name"
+    }
 
 
-    // {{players.length}}
-    // {{players[0].player}}
-
-    $scope.addPlayers = function(){
-      console.log(players)
-
-      players.$add({player: $scope.player})
+    $scope.addPlayers = function(e){
+      if (e.keyCode != 13) return;
+      players.$add({player: $scope.player});
+      players = "";
     }
 
 
