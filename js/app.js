@@ -92,6 +92,29 @@ $(document).ready(function () {
       pixelDataRef.on('child_removed', clearPixel);
     
     };
+    var seconds;
+    var temp;
+    
+
+    var startTimer = document.getElementById('start-timer')
+     startTimer.addEventListener("click", countdown, false);
+
+    function countdown() {
+      seconds = document.getElementById('countdown').innerHTML;
+      seconds = parseInt(seconds, 10);
+    
+      if (seconds == 1) {
+        temp = document.getElementById('countdown');
+        temp.innerHTML = "Times Up!!!";
+        clearCanvas();
+        return;
+      }
+    
+      seconds--;
+      temp = document.getElementById('countdown');
+      temp.innerHTML = seconds;
+      timeoutMyOswego = setTimeout(countdown, 1000);
+    }
 });
 
 

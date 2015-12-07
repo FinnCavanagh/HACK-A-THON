@@ -50,31 +50,10 @@
         <!-- the countdown -->
 
         <div id="count">
-        <div id="countdown">20</div>
+        <div id="countdown">30</div>
         </div>
 
-      <script type="text/javascript">
-        var seconds;
-        var temp;
-       
-        function countdown() {
-          seconds = document.getElementById('countdown').innerHTML;
-          seconds = parseInt(seconds, 10);
-       
-          if (seconds == 1) {
-            temp = document.getElementById('countdown');
-            temp.innerHTML = "Times Up!!!";
-            return;
-          }
-       
-          seconds--;
-          temp = document.getElementById('countdown');
-          temp.innerHTML = seconds;
-          timeoutMyOswego = setTimeout(countdown, 500);
-        }
-       
-        countdown();
-      </script>
+
          
    <!-- countdown finishes. -->
     
@@ -87,12 +66,19 @@
     <button id="player-2">Player 2</div>
     <button id="player-3">Player 3</div>
     <button id="player-4">Player 4</div> -->
+
+    <button id="reset-board"> Clear </button>
+    <button id="start-timer"> Start Timer </button>
     <div id="canvas">
     <div class="l-demo-container">
         <canvas id="drawing-canvas" width="550" height="550"></canvas>
     </div>
     <div id="colorholder"></div> 
+<<<<<<< HEAD
     <button id="reset-board"> Clear </button>
+=======
+    </div>
+>>>>>>> b40a4b23447d158923109029df0056ec0248f863
 
   </body>
 </html>
