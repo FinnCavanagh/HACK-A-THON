@@ -9,10 +9,6 @@ angular
     var players = $scope.players
     console.log(players)
 
-   // $players.each(function( index ) {
-   // console.log( index + ": " + $( this ).text() );
-   // });
-
 
     if (players.length == 0){
       $scope.playerText = "Player 1 enter your name"
@@ -25,11 +21,10 @@ angular
     }
 
 
-    // {{players.length}}
-    // {{players[0].player}}
-
-    $scope.addPlayers = function(){
-      players.$add({player: $scope.player})
+    $scope.addPlayers = function(e){
+      if (e.keyCode != 13) return;
+      players.$add({player: $scope.player});
+      players = "";
     }
 
 
