@@ -1,6 +1,7 @@
 #drawing-canvas {
   border: solid;
   background-color: white;
+  padding-left: 50px;
 }
 
 .boxed {
@@ -14,7 +15,46 @@
 
 body {
 
-  background: linear-gradient(#ff1a1a, #009900)
+  background: linear-gradient(#ff1a1a, #009900);
+}
+
+#chat {
+  float: right;
+  margin-right: 70px;
+  margin-top: 50px;
+}
+
+#canvas {
+  margin-left: 60px;
+  margin-bottom: 50px;
+}
+
+#count {
+  display: inline-block;
+  float: left;
+  margin-top: 40px;
+  font-size: 50px;
+}
+
+#playersDiv {
+  width: 500px;
+  float:left;
+  margin-top: 50px;
+  margin-left: 60px; 
+
+}
+
+#name {
+  width: 20%;
+}
+
+#message {
+  width:70%;
+  height:20%;
+}
+
+#chat-name {
+margin-top: 40px;
 }
 
 .colorbox {
@@ -28,3 +68,4 @@ body {
 
 body { background-color:#333; }
  
+messagesDiv
