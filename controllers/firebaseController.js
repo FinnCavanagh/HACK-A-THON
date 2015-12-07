@@ -17,7 +17,7 @@ function firebaseController($firebaseArray, $scope, $firebaseAuth) {
     $scope.msg = "";
   }
 
-  console.log($scope.players)
+
   $scope.players = $firebaseArray(firebaseRef).players
 
   $scope.addPlayers = function(){
